@@ -16,7 +16,8 @@ public class Bat implements InvocationHandler {
     public  Object getInstance(Person person){
         this.person = person;
         Class clazz =  person.getClass();
-        return  Proxy.newProxyInstance(clazz.getClassLoader(),clazz.getInterfaces(),this);
+        Object object =   Proxy.newProxyInstance(clazz.getClassLoader(),clazz.getInterfaces(),this);
+        return object;
     }
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
