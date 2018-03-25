@@ -9,7 +9,10 @@ import java.util.Map;
  * 注册Event监听器
  */
 public class EventListener {
-    private Map<Enum,Event> eventMap = new HashMap<>();
+    protected Map<Enum,Event> eventMap = new HashMap<>();
+    public void addListener(Enum eventType){
+        eventMap.put(eventType,new Event());
+    }
     public void addListener(Enum eventType,Object target,Method callback){
         eventMap.put(eventType,new Event(target,callback));
     }

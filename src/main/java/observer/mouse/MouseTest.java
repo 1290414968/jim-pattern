@@ -37,7 +37,7 @@ public class MouseTest {
          * 5、观察者对象
          */
 
-        mouse.addListener(EventType.CLICK,callBack,onClick);
+        mouse.addListener(EventType.onClick,callBack,onClick);
         mouse.click();
 
     }

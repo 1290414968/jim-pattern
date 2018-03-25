@@ -9,6 +9,8 @@ public class Event {
     private String trigger;
     private Long time;
 
+    public Event() {
+    }
     public Event(Object target, Method callback) {
         this.target = target;
         this.callback = callback;
